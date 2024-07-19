@@ -36,7 +36,7 @@ cd acme-store-main
 ### Install dependencies:
 
 ```sh
-npm install
+npm install --legacy-peer-deps
 # or
 yarn install
 ```
