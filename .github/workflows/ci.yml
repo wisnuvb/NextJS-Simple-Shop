@@ -11,9 +11,7 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        run: npm install
-      - name: Update dependencies
-        run: npm update --legacy-peer-deps
+        run: npm install --legacy-peer-deps
       - name: Run tests and collect coverage
         run: npm run test
       - name: Upload coverage reports to Codecov
