@@ -38,10 +38,20 @@ cd acme-store-main
 ```sh
 npm install --legacy-peer-deps
 # or
-yarn install
+yarn install && yarn upgrade
 ```
 
-### Run
+If you are using yarn, it is highly recommended to do a **yarn upgrade** so you can run tests smoothly. This is because this project has some dependencies that are outdated.
+
+### Running Tests
+
+```sh
+npm run test
+# or
+yarn test
+```
+
+### Run dev
 
 ```sh
 npm run dev
@@ -55,24 +65,6 @@ If you don't change the port, you can access it at **[http://localhost:3000]**
 
 - **Mobile Optimization**: The application has not yet been fully optimized for mobile displays.
 - **Dependencies**: Some dependencies are outdated and may require updating before running tests.
-
-## Updating Dependencies
-
-Before running tests, ensure that your dependencies are up-to-date and compatible:
-
-```sh
-npm update --legacy-peer-deps
-# or
-yarn upgrade
-```
-
-Running Tests
-
-```sh
-npm run test
-# or
-yarn test
-```
 
 ## Troubleshooting
 
