@@ -1,9 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
-import { useCart } from "@/hooks";
+import { useCart, useCurrency } from "@/hooks";
 import { CartItem } from "@/store/models";
-import { useCurrency } from "@/hooks";
 import {
   addSelectedCartItem,
   cartReducer,

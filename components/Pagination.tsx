@@ -1,13 +1,16 @@
 import React, { FC } from "react";
 
-import { paginationProps } from "@/utils/interfaces";
+import { PaginationProps } from "@/utils/interfaces";
 
-interface PaginationProps {
-  pagination: paginationProps;
+interface PaginationComponentProps {
+  pagination: PaginationProps;
   total: number;
 }
 
-export const Pagination: FC<PaginationProps> = ({ pagination, total }) => {
+export const Pagination: FC<PaginationComponentProps> = ({
+  pagination,
+  total,
+}) => {
   const { offset, handlePageChange, limit } = pagination;
 
   const totalPages = Math.ceil(total / limit);
@@ -18,14 +21,12 @@ export const Pagination: FC<PaginationProps> = ({ pagination, total }) => {
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
+    } else if (offset <= 3) {
+      pages.push(1, 2, 3, "...", totalPages);
+    } else if (offset >= totalPages - 2) {
+      pages.push(1, "...", totalPages - 2, totalPages - 1, totalPages);
     } else {
-      if (offset <= 3) {
-        pages.push(1, 2, 3, "...", totalPages);
-      } else if (offset >= totalPages - 2) {
-        pages.push(1, "...", totalPages - 2, totalPages - 1, totalPages);
-      } else {
-        pages.push(1, "...", offset - 1, offset, offset + 1, "...", totalPages);
-      }
+      pages.push(1, "...", offset - 1, offset, offset + 1, "...", totalPages);
     }
     return pages;
   };
@@ -45,7 +46,7 @@ export const Pagination: FC<PaginationProps> = ({ pagination, total }) => {
       {getPageNumbers().map((page, index) => (
         <button
           data-testid="btn-page"
-          key={index}
+          key={`${page}-${index}`}
           onClick={() => typeof page === "number" && handlePageChange(page)}
           className={`px-4 py-2 mx-1 border rounded ${
             offset === page ? "bg-gray-400 text-white" : "bg-white"

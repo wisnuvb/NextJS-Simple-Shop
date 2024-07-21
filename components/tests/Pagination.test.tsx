@@ -1,10 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Pagination } from "..";
-import { paginationProps } from "@/utils/interfaces";
+import { PaginationProps } from "@/utils/interfaces";
 
 const mockHandlePageChange = jest.fn();
 
-const mockPaginationProps: paginationProps = {
+const mockPaginationProps: PaginationProps = {
   offset: 1,
   handlePageChange: mockHandlePageChange,
   limit: 10,

@@ -21,13 +21,13 @@ export const convertPriceToCurrentFormat = (
   product: Item,
   currentCurrency: string
 ) => {
-  const price = product?.price || 0;
-  const usdCoef = getCurrencyProduct(currencies, product)?.usdCoef || 0;
+  const price = product?.price ?? 0;
+  const usdCoef = getCurrencyProduct(currencies, product)?.usdCoef ?? 0;
   const usdPrice = price / usdCoef;
 
   const activeCurrency = getActiveCurrency(currencies, currentCurrency);
 
-  const currentCoefToUSD = activeCurrency?.usdCoef || 0;
+  const currentCoefToUSD = activeCurrency?.usdCoef ?? 0;
   return usdPrice * currentCoefToUSD;
 };
 

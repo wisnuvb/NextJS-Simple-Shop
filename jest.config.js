@@ -17,7 +17,7 @@ const customJestConfig = {
   transformIgnorePatterns: ["<rootDir>/node_modules/"],
   collectCoverage: true,
   coverageDirectory: "<rootDir>/coverage",
-  coverageReporters: ["json", "html", "text"],
+  coverageReporters: ["text", "lcov"],
   silent: true,
 };
 

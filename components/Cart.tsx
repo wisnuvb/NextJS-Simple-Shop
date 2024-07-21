@@ -70,7 +70,7 @@ export const Cart = () => {
                     />
                   )}
                   <p className="flex items-center gap-1">
-                    Select All
+                    <span>Select All</span>
                     <span className="text-sm text-gray-500 font-normal">
                       ({cartItems?.length})
                     </span>

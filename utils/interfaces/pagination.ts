@@ -1,4 +1,4 @@
-export interface paginationProps {
+export interface PaginationProps {
   limit: number;
   offset: number;
   handlePageChange: (pageNumber: number) => void;

@@ -6,7 +6,7 @@ interface SEOProps {
   description?: string;
 }
 
-export const SEO: FC<SEOProps> = ({ title, description }) => {
+export const Meta: FC<SEOProps> = ({ title, description }) => {
   return (
     <NextSeo
       title={title}

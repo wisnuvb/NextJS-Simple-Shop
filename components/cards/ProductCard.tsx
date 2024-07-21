@@ -64,7 +64,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <QuantityControl product={cart} />
         ) : (
           <button
-            date-testid="btn-add-to-cart"
+            data-testid="btn-add-to-cart"
             type="button"
             className={cn(
               "bg-Primary hover:bg-Primary/85 text-white flex items-center justify-center gap-2 py-2 px-4 rounded text-sm font-semibold w-full disabled:bg-Primary/45 disabled:cursor-not-allowed transition-all duration-300"

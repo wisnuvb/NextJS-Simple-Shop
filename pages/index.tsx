@@ -7,7 +7,7 @@ import { useGetCurrenciesQuery, useGetProductsQuery } from "@/store/services";
 import { Item } from "@/common/types";
 import { Header, Pagination, ProductList, SearchBar } from "@/components";
 import { usePagination } from "@/hooks";
-import { SEO } from "@/components/seo";
+import { Meta } from "@/components/seo";
 
 const Cart = dynamic(() => import("@/components").then((mod) => mod.Cart), {
   ssr: false,
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <SEO title="Acme Online Store" />
+      <Meta title="Acme Online Store" />
 
       <div className="grid grid-cols-12">
         <div className="col-span-12 pb-28 sm:col-span-8">

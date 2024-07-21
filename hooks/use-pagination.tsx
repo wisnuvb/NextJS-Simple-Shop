@@ -1,5 +1,5 @@
 import React from "react";
-import { paginationProps } from "@/utils/interfaces";
+import { PaginationProps } from "@/utils/interfaces";
 
 export const usePagination = () => {
   const [limit, setLimit] = React.useState(12);
@@ -13,7 +13,7 @@ export const usePagination = () => {
     setLimit(limit);
   };
 
-  const pagination: paginationProps = {
+  const pagination: PaginationProps = {
     limit,
     offset,
     handlePageChange,
