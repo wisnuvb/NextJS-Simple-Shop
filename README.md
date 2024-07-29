@@ -1,8 +1,8 @@
 [![codecov](https://codecov.io/gh/wisnuvb/acme-store-main/graph/badge.svg?token=32XKUAPDGU)](https://codecov.io/gh/wisnuvb/acme-store-main)
 
-# Autify Front-End Technical Assignment (Wisnu)
+# NextJS Simple Shop
 
-This repository contains the **front-end technical assignment for Autify**, built with Next.js. Below is brief documentation and instructions for setting up and testing the project.
+Below is brief documentation and instructions for setting up and testing the project.
 
 ## Features
 
